@@ -2522,3 +2522,156 @@ a.btn {
         font-size: 10px;
     }
 }
+
+/* =========================================================
+   FINAL PAGE-SPECIFIC BUTTON / HEADER POLISH
+   ========================================================= */
+
+/* Page headers */
+.page-head {
+    align-items: center;
+}
+
+.page-head .page-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* All page-header buttons compact */
+.page-head .page-actions .btn {
+    width: auto !important;
+    min-width: 0 !important;
+    min-height: 36px !important;
+    height: 36px !important;
+    padding: 7px 13px !important;
+    border-radius: 8px !important;
+    font-size: 12px !important;
+    line-height: 1.2;
+    white-space: nowrap;
+    flex: 0 0 auto;
+}
+
+/* Daily Reports / Leave Management panel buttons */
+.panel-head > .btn,
+.panel-head > button,
+.panel-head > a {
+    width: auto !important;
+    min-width: 0 !important;
+    min-height: 35px !important;
+    height: 35px !important;
+    padding: 7px 12px !important;
+    border-radius: 8px !important;
+    font-size: 12px !important;
+    line-height: 1.2;
+    white-space: nowrap;
+    flex: 0 0 auto;
+}
+
+/* Report and leave action areas */
+.panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.panel-head h3 {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+/* My Profile buttons */
+.modal-actions .btn,
+.modal-actions button {
+    min-height: 38px !important;
+    height: 38px !important;
+    padding: 8px 14px !important;
+    border-radius: 8px !important;
+    font-size: 12px !important;
+    line-height: 1.2;
+}
+
+/* Profile save/update button */
+.modal-actions .btn.full {
+    width: auto !important;
+}
+
+/* Keep profile modal actions neat */
+.modal-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* File input should not look like a huge button */
+.profile-photo-field input[type="file"] {
+    max-width: 300px;
+    min-height: 38px;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 680px) {
+
+    .page-head {
+        align-items: flex-start;
+    }
+
+    .page-head .page-actions {
+        width: 100%;
+        display: flex;
+        gap: 8px;
+    }
+
+    .page-head .page-actions .btn {
+        width: auto !important;
+        flex: 0 0 auto;
+        min-height: 35px !important;
+        height: 35px !important;
+        padding: 7px 11px !important;
+        font-size: 11px !important;
+    }
+
+    .panel-head {
+        align-items: center;
+    }
+
+    .panel-head > .btn,
+    .panel-head > button,
+    .panel-head > a {
+        min-height: 34px !important;
+        height: 34px !important;
+        padding: 6px 10px !important;
+        font-size: 11px !important;
+    }
+
+    .modal-actions {
+        justify-content: stretch;
+    }
+
+    .modal-actions .btn,
+    .modal-actions button {
+        min-height: 36px !important;
+        height: 36px !important;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .page-head .page-actions .btn {
+        padding: 6px 9px !important;
+        font-size: 10px !important;
+    }
+
+    .panel-head > .btn,
+    .panel-head > button,
+    .panel-head > a {
+        padding: 6px 8px !important;
+        font-size: 10px !important;
+    }
+}
