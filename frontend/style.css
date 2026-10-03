@@ -2226,3 +2226,299 @@ tr:last-child td {
 .document-file-input::file-selector-button:hover {
     background: #1d4ed8;
 }
+
+/* =========================================================
+   CTECH - FINAL DASHBOARD UI / UX POLISH
+   ========================================================= */
+
+/* ---------- TOPBAR ---------- */
+
+.topbar {
+    min-width: 0;
+    gap: 16px;
+}
+
+.topbar h2 {
+    min-width: 0;
+    flex: 1 1 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.user-chip {
+    flex: 0 0 auto;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Keep profile/logout controls compact */
+.user-chip .btn,
+.user-chip button {
+    min-height: 36px;
+    height: 36px;
+    padding: 7px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* Avatar should not push the topbar */
+.user-chip > .avatar {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+}
+
+/* ---------- PAGE HEADER ---------- */
+
+.page-head {
+    min-width: 0;
+    align-items: center;
+}
+
+.page-head > div:first-child {
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+.page-actions {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.page-actions .btn {
+    min-height: 36px;
+    height: 36px;
+    padding: 7px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* ---------- PANEL HEAD ---------- */
+
+.panel-head {
+    min-width: 0;
+    align-items: center;
+}
+
+.panel-head > * {
+    min-width: 0;
+}
+
+/* ---------- COMPACT ACTION BUTTONS ---------- */
+
+.panel .btn {
+    min-height: 36px;
+    padding: 7px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+/* Specifically make + Submit Report / + Request Leave
+   compact and professional */
+
+button.btn,
+a.btn {
+    line-height: 1.2;
+}
+
+.panel-head .btn,
+.page-head .btn {
+    width: auto;
+    min-width: auto;
+}
+
+/* ---------- TASK ACTIONS ---------- */
+
+.task-actions .btn {
+    min-height: 32px;
+    height: 32px;
+    padding: 6px 10px;
+    font-size: 11px;
+    border-radius: 7px;
+}
+
+/* ---------- PROJECT / TASK CARDS ---------- */
+
+.task-card {
+    min-width: 0;
+}
+
+.task-card > div:first-child {
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+.task-card h4,
+.task-card p {
+    overflow-wrap: anywhere;
+}
+
+/* ---------- DAILY REPORT / LEAVE PANELS ---------- */
+
+.panel-head .btn {
+    flex-shrink: 0;
+}
+
+/* ---------- GENERAL BUTTON CONSISTENCY ---------- */
+
+.btn {
+    font-size: 13px;
+}
+
+.btn.small {
+    min-height: 30px;
+    height: 30px;
+    padding: 6px 10px;
+    font-size: 11px;
+}
+
+/* ---------- DESKTOP ---------- */
+
+@media (min-width: 1101px) {
+
+    .topbar {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .content {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .page-head {
+        margin-bottom: 20px;
+    }
+
+    .panel {
+        padding: 20px;
+    }
+}
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 900px) {
+
+    .topbar {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .page-head {
+        gap: 16px;
+    }
+
+    .page-actions {
+        gap: 6px;
+    }
+
+    .panel-head {
+        gap: 10px;
+    }
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 680px) {
+
+    .topbar {
+        height: 64px;
+        padding: 0 14px;
+        gap: 8px;
+    }
+
+    .topbar h2 {
+        flex: 1 1 0;
+        min-width: 0;
+        font-size: 15px;
+    }
+
+    .user-chip {
+        gap: 5px;
+    }
+
+    .user-chip .btn,
+    .user-chip button {
+        min-height: 34px;
+        height: 34px;
+        padding: 6px 9px;
+        font-size: 11px;
+    }
+
+    .user-chip > .avatar {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+    }
+
+    .page-head {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .page-actions {
+        width: 100%;
+        display: flex;
+        gap: 8px;
+    }
+
+    .page-actions .btn {
+        flex: 1 1 auto;
+        width: auto;
+        min-height: 36px;
+        height: 36px;
+    }
+
+    .panel-head {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .panel-head .btn {
+        flex: 0 0 auto;
+        min-height: 34px;
+        height: 34px;
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+
+    .panel h3 {
+        font-size: 14px;
+    }
+
+    .task-actions {
+        gap: 6px;
+    }
+}
+
+/* ---------- VERY SMALL PHONES ---------- */
+
+@media (max-width: 420px) {
+
+    .topbar {
+        padding: 0 10px;
+    }
+
+    .topbar h2 {
+        max-width: 125px;
+        font-size: 14px;
+    }
+
+    .user-chip .btn,
+    .user-chip button {
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+
+    .panel-head .btn {
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+}
