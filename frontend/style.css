@@ -2675,3 +2675,55 @@ a.btn {
         font-size: 10px !important;
     }
 }
+/* Compact desktop topbar */
+.topbar {
+    gap: 16px;
+    min-width: 0;
+}
+
+.topbar > div:first-child {
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+.topbar-title {
+    margin: 0;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.topbar > div:last-child {
+    flex: 0 0 auto;
+    min-width: 0;
+    gap: 8px !important;
+}
+
+.topbar > div:last-child .btn.small {
+    min-height: 34px;
+    height: 34px;
+    padding: 7px 11px;
+    border-radius: 8px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* Compact action buttons */
+.panel-head > .btn,
+.panel-head > button {
+    min-height: 35px !important;
+    height: 35px !important;
+    padding: 7px 12px !important;
+    border-radius: 8px !important;
+    font-size: 12px !important;
+    line-height: 1.2;
+    white-space: nowrap;
+    width: auto !important;
+}
+
+.panel-head > .btn.small,
+.panel-head > button.small {
+    min-height: 35px !important;
+    height: 35px !important;
+}
