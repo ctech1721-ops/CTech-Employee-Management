@@ -1128,7 +1128,7 @@ function render() {
                             ☰
                         </button>
 
-                        <h2>${pageTitle()}</h2>
+                        <h2 class="topbar-title">${pageTitle()}</h2>
 
                     </div>
 
@@ -2987,50 +2987,57 @@ function reportsPage() {
         : db.reports;
 
     return `
-       <div class="panel-head">
-    <div>
-        <h3>Daily Work Reports</h3>
-        <p class="muted">
-            ${mine
-                ? "Submit your daily progress and blockers."
-                : "Review employee daily updates."
-            }
-        </p>
-    </div>
+        <div class="panel">
 
-    ${
-        current.role === "employee"
-            ? `
-                <button
-                    type="button"
-                    class="btn"
-                    onclick="openReport()"
-                >
-                    ＋ Submit report
-                </button>
-            `
-            : `
-                <button
-                    type="button"
-                    class="btn secondary"
-                    onclick="recoverUnassignedRecords()"
-                >
-                    Recover Unassigned
-                </button>
-            `
-    }
-</div>
+            <div class="panel-head">
+
+                <div>
+                    <h3>Daily Work Reports</h3>
+
+                    <p class="muted">
+                        ${
+                            mine
+                                ? "Submit your daily progress and blockers."
+                                : "Review employee daily updates."
+                        }
+                    </p>
+                </div>
+
+                ${
+                    current.role === "employee"
+                        ? `
+                            <button
+                                type="button"
+                                class="btn small"
+                                onclick="openReport()"
+                            >
+                                ＋ Submit report
+                            </button>
+                        `
+                        : `
+                            <button
+                                type="button"
+                                class="btn secondary small"
+                                onclick="recoverUnassignedRecords()"
+                            >
+                                Recover Unassigned
+                            </button>
+                        `
+                }
+
             </div>
 
             <div class="toolbar">
                 ${
                     mine
                         ? ""
-                        : `<input
-                            class="search"
-                            id="reportSearch"
-                            placeholder="Search employee or report…"
-                        >`
+                        : `
+                            <input
+                                class="search"
+                                id="reportSearch"
+                                placeholder="Search employee or report…"
+                            >
+                        `
                 }
             </div>
 
@@ -3172,7 +3179,7 @@ function leavesPage() {
                         ? `
                             <button
                                 type="button"
-                                class="btn"
+                                class="btn small"
                                 onclick="openLeave()"
                             >
                                 ＋ Request leave
